@@ -23,6 +23,7 @@ tile.steelBlock.name=钢块
 tile.refinedIronBlock.name=精炼铁块
 tile.leadBlock.name=铅块
 tile.stoneDustBlock.name=石粉块
+tile.cesu=CESU
 
 #Items
 item.itemFuelUran.name=铀燃料

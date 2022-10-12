@@ -28,6 +28,7 @@ tile.steelBlock.name=Steel Block
 tile.refinedIronBlock.name=Refined Iron Block
 tile.leadBlock.name=Lead Block
 tile.stoneDustBlock.name=Stone Dust Block
+tile.cesu=CESU
 
 #Items
 item.itemFuelUran.name=Uranium Fuel

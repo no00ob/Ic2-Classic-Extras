@@ -17,6 +17,7 @@ import trinsdar.ic2c_extras.blocks.BlockMachine;
 import trinsdar.ic2c_extras.blocks.BlockMetal;
 import trinsdar.ic2c_extras.blocks.BlockStoneDust;
 import trinsdar.ic2c_extras.blocks.CropPlumbilia;
+import trinsdar.ic2c_extras.blocks.BlockEnergyStorage;
 import trinsdar.ic2c_extras.fluid.FluidCustom;
 import trinsdar.ic2c_extras.items.ItemCasings;
 import trinsdar.ic2c_extras.items.ItemContainmentBox;
@@ -56,6 +57,7 @@ import trinsdar.ic2c_extras.tileentity.TileEntityThermalCentrifuge;
 import trinsdar.ic2c_extras.tileentity.TileEntityThermalWasher;
 import trinsdar.ic2c_extras.tileentity.TileEntityThermoElectricGeneratorBase;
 import trinsdar.ic2c_extras.tileentity.TileEntityTreeTapper;
+import trinsdar.ic2c_extras.tileentity.TileEntityCesu;
 import trinsdar.ic2c_extras.util.references.Ic2cExtrasLang;
 
 import java.util.ArrayList;
@@ -88,6 +90,7 @@ public class Registry {
     public static final BlockMetal refinedIronBlock = registerBlock(new BlockMetal("refinedIronBlock", 1));
     public static final BlockMetal leadBlock = registerBlock(new BlockMetal("leadBlock", 2));
     public static final BlockStoneDust stoneDustBlock = registerBlock(new BlockStoneDust());
+    public static final BlockEnergyStorage cesu = registerBlock(new BlockEnergyStorage("cesu", Ic2cExtrasLang.CESU));
 
     public static CropCard cropPlumbilia = new CropPlumbilia();
 
@@ -313,6 +316,7 @@ public class Registry {
         registerTile(TileEntityReinforcedStoneCable.class, "ReinforcedStoneCable");
         registerTile(TileEntityElectricHeatGenerator.class, "ElectricHeatGenerator");
         registerTile(TileEntityFermenter.class, "Fermenter");
+        registerTile(TileEntityCesu.class, "Cesu");
     }
 
     public static void registerTile(Class<? extends TileEntity> tile, String name){
