@@ -41,7 +41,7 @@ public class GuiCesu extends GuiContainerBase {
 		if (buttonList.get(0).isMouseOver())
 			drawHoveringText(Arrays.asList(I18n.format("info.redstoneMode"),I18n.format("info.redstoneMode" + container.te.getRedstoneMode())),mouseX, mouseY);
 		if (mouseX >= guiLeft + 51 && mouseY >= guiTop + 34 && mouseX < guiLeft + 84 && mouseY < guiTop + 51)
-			drawHoveringText(String.format("%.2f M/%d M EU", container.te.getStoredEnergy() / 1000000, container.te.getCapacity() / 1000000), mouseX, mouseY);
+			drawHoveringText(String.format("%.2f M/%d M EU", container.te.getEnergy() / 1000000, container.te.getCapacity() / 1000000), mouseX, mouseY);
 	}
 
 	@Override
@@ -49,7 +49,7 @@ public class GuiCesu extends GuiContainerBase {
 		drawCenteredText(name, xSize, 6);
 		drawLeftAlignedText(I18n.format("ic2.EUStorage.gui.info.armor"), 8, ySize - 126 + 3);
 		drawLeftAlignedText(I18n.format("ic2.EUStorage.gui.info.level"), 51, 20);
-		int e = (int) Math.min(container.te.getStoredEnergy(), container.te.getCapacity());
+		int e = (int) Math.min(container.te.getEnergy(), container.te.getCapacity());
 		drawLeftAlignedText(" " + e, 92, 35);
 		drawLeftAlignedText("/" + container.te.getCapacity(), 90, 45);
 		String output = I18n.format("ic2.EUStorage.gui.info.output", container.te.getOutput());
@@ -60,7 +60,7 @@ public class GuiCesu extends GuiContainerBase {
 	protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
 		super.drawGuiContainerBackgroundLayer(partialTicks, mouseX, mouseY);
 
-		int energyWidth = (int) (25.0D * container.te.getStoredEnergy() / container.te.getCapacity());
+		int energyWidth = (int) (25.0D * container.te.getEnergy() / container.te.getCapacity());
 		if (energyWidth > 0)
 			drawTexturedModalRect(guiLeft + 55, guiTop + 34, 176, 14, energyWidth, 14);
 	}

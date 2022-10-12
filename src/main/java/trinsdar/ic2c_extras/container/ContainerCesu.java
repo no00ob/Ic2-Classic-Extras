@@ -29,7 +29,7 @@ public class ContainerCesu extends ContainerBase<TileEntityCesu> {
 	@Override
 	public void detectAndSendChanges() {
 		super.detectAndSendChanges();
-		double energy = te.getStoredEnergy();
+		double energy = te.getEnergy();
 		for (IContainerListener listener : listeners)
 			if (lastEnergy != energy)
 				NetworkHelper.updateClientTileEntity(listener, te.getPos(), 1, energy);

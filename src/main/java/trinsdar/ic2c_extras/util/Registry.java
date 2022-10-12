@@ -90,7 +90,7 @@ public class Registry {
     public static final BlockMetal refinedIronBlock = registerBlock(new BlockMetal("refinedIronBlock", 1));
     public static final BlockMetal leadBlock = registerBlock(new BlockMetal("leadBlock", 2));
     public static final BlockStoneDust stoneDustBlock = registerBlock(new BlockStoneDust());
-    public static final BlockEnergyStorage cesu = registerBlock(new BlockEnergyStorage("cesu", Ic2cExtrasLang.CESU));
+    public static Block cesu;
 
     public static CropCard cropPlumbilia = new CropPlumbilia();
 
